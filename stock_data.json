@@ -1,1 +1,352 @@
-[{"id":1,"name":"Sugar","price":150.0,"quantity":100.0,"reorderLeft":90.0},{"id":2,"name":"Flour","price":175.0,"quantity":550.0,"reorderLeft":140.0},{"id":3,"name":"Rice","price":100.0,"quantity":200.0,"reorderLeft":190.0},{"id":4,"name":"Milk","price":140.0,"quantity":80.0,"reorderLeft":70.0},{"id":5,"name":"Eggs","price":300.0,"quantity":120.0,"reorderLeft":110.0},{"id":6,"name":"Bread","price":198.0,"quantity":90.0,"reorderLeft":80.0},{"id":7,"name":"Butter","price":124.5,"quantity":180.0,"reorderLeft":170.0},{"id":8,"name":"Salt","price":198.0,"quantity":60.0,"reorderLeft":50.0},{"id":9,"name":"Pepper","price":274.5,"quantity":140.0,"reorderLeft":130.0},{"id":10,"name":"Coffee","price":79.5,"quantity":110.0,"reorderLeft":100.0},{"id":11,"name":"Tea","price":119.4,"quantity":70.0,"reorderLeft":60.0},{"id":12,"name":"Cereal","price":268.2,"quantity":130.0,"reorderLeft":120.0},{"id":13,"name":"Pasta","price":198.0,"quantity":100.0,"reorderLeft":90.0},{"id":14,"name":"Sauce","price":124.5,"quantity":150.0,"reorderLeft":140.0},{"id":15,"name":"Jam","price":237.6,"quantity":120.0,"reorderLeft":110.0},{"id":16,"name":"Cheese","price":269.1,"quantity":80.0,"reorderLeft":70.0},{"id":17,"name":"Yogurt","price":197.7,"quantity":200.0,"reorderLeft":190.0},{"id":18,"name":"Apples","price":149.5,"quantity":90.0,"reorderLeft":80.0},{"id":19,"name":"Bananas","price":247.5,"quantity":60.0,"reorderLeft":50.0},{"id":20,"name":"Oranges","price":139.5,"quantity":140.0,"reorderLeft":130.0},{"id":21,"name":"Potatoes","price":198.0,"quantity":110.0,"reorderLeft":100.0},{"id":22,"name":"Onions","price":99.0,"quantity":70.0,"reorderLeft":60.0},{"id":23,"name":"Tomatoes","price":213.6,"quantity":130.0,"reorderLeft":120.0},{"id":24,"name":"Carrots","price":174.5,"quantity":100.0,"reorderLeft":90.0},{"id":25,"name":"Cucumbers","price":124.5,"quantity":150.0,"reorderLeft":140.0},{"id":26,"name":"Bell Peppers","price":237.6,"quantity":120.0,"reorderLeft":110.0},{"id":27,"name":"Lettuce","price":274.5,"quantity":80.0,"reorderLeft":70.0},{"id":28,"name":"Mushrooms","price":150.0,"quantity":200.0,"reorderLeft":190.0},{"id":29,"name":"Broccoli","price":99.0,"quantity":90.0,"reorderLeft":80.0},{"id":30,"name":"Spinach","price":224.1,"quantity":60.0,"reorderLeft":50.0},{"id":31,"name":"Kale","price":129.5,"quantity":140.0,"reorderLeft":130.0},{"id":32,"name":"Celery","price":198.9,"quantity":110.0,"reorderLeft":100.0},{"id":33,"name":"Cabbage","price":84.6,"quantity":70.0,"reorderLeft":60.0},{"id":34,"name":"Zucchini","price":192.6,"quantity":130.0,"reorderLeft":120.0},{"id":35,"name":"Eggplants","price":150.0,"quantity":100.0,"reorderLeft":90.0},{"id":36,"name":"Cauliflower","price":174.5,"quantity":150.0,"reorderLeft":140.0},{"id":37,"name":"Avocado","price":99.0,"quantity":200.0,"reorderLeft":190.0},{"id":38,"name":"Garlic","price":139.5,"quantity":80.0,"reorderLeft":70.0},{"id":39,"name":"Ginger","price":247.5,"quantity":120.0,"reorderLeft":110.0},{"id":40,"name":"Lemons","price":198.0,"quantity":90.0,"reorderLeft":80.0},{"id":41,"name":"Limes","price":124.5,"quantity":180.0,"reorderLeft":170.0},{"id":42,"name":"Apples","price":224.1,"quantity":60.0,"reorderLeft":50.0},{"id":43,"name":"Bananas","price":274.5,"quantity":140.0,"reorderLeft":130.0},{"id":44,"name":"Oranges","price":79.5,"quantity":110.0,"reorderLeft":100.0},{"id":45,"name":"Milk","price":119.4,"quantity":70.0,"reorderLeft":60.0},{"id":46,"name":"Eggs","price":268.2,"quantity":130.0,"reorderLeft":120.0},{"id":47,"name":"Bread","price":198.0,"quantity":100.0,"reorderLeft":90.0},{"id":48,"name":"Butter","price":124.5,"quantity":150.0,"reorderLeft":140.0},{"id":49,"name":"Sugar","price":237.6,"quantity":120.0,"reorderLeft":110.0},{"id":50,"name":"Salt","price":269.1,"quantity":80.0,"reorderLeft":70.0}]
+[
+    {
+        "id": 1,
+        "name": "Sugar",
+        "price": 150.0,
+        "quantity": 100.0,
+        "reorderLeft": 90.0
+    },
+    {
+        "id": 2,
+        "name": "Flours",
+        "price": 175.0,
+        "quantity": 360.0,
+        "reorderLeft": 350.0
+    },
+    {
+        "id": 3,
+        "name": "Rice",
+        "price": 100.0,
+        "quantity": 200.0,
+        "reorderLeft": 190.0
+    },
+    {
+        "id": 4,
+        "name": "Milk",
+        "price": 140.0,
+        "quantity": 80.0,
+        "reorderLeft": 70.0
+    },
+    {
+        "id": 5,
+        "name": "Eggs",
+        "price": 300.0,
+        "quantity": 120.0,
+        "reorderLeft": 110.0
+    },
+    {
+        "id": 6,
+        "name": "Bread",
+        "price": 198.0,
+        "quantity": 90.0,
+        "reorderLeft": 80.0
+    },
+    {
+        "id": 7,
+        "name": "Butter",
+        "price": 124.5,
+        "quantity": 180.0,
+        "reorderLeft": 170.0
+    },
+    {
+        "id": 8,
+        "name": "Salt",
+        "price": 198.0,
+        "quantity": 60.0,
+        "reorderLeft": 50.0
+    },
+    {
+        "id": 9,
+        "name": "Pepper",
+        "price": 274.5,
+        "quantity": 140.0,
+        "reorderLeft": 130.0
+    },
+    {
+        "id": 10,
+        "name": "Coffee",
+        "price": 79.5,
+        "quantity": 110.0,
+        "reorderLeft": 100.0
+    },
+    {
+        "id": 11,
+        "name": "Tea",
+        "price": 119.4,
+        "quantity": 70.0,
+        "reorderLeft": 60.0
+    },
+    {
+        "id": 12,
+        "name": "Cereal",
+        "price": 268.2,
+        "quantity": 130.0,
+        "reorderLeft": 120.0
+    },
+    {
+        "id": 13,
+        "name": "Pasta",
+        "price": 198.0,
+        "quantity": 100.0,
+        "reorderLeft": 90.0
+    },
+    {
+        "id": 14,
+        "name": "Sauce",
+        "price": 124.5,
+        "quantity": 150.0,
+        "reorderLeft": 140.0
+    },
+    {
+        "id": 15,
+        "name": "Jam",
+        "price": 237.6,
+        "quantity": 120.0,
+        "reorderLeft": 110.0
+    },
+    {
+        "id": 16,
+        "name": "Cheese",
+        "price": 269.1,
+        "quantity": 80.0,
+        "reorderLeft": 70.0
+    },
+    {
+        "id": 17,
+        "name": "Yogurt",
+        "price": 197.7,
+        "quantity": 200.0,
+        "reorderLeft": 190.0
+    },
+    {
+        "id": 18,
+        "name": "Apples",
+        "price": 149.5,
+        "quantity": 90.0,
+        "reorderLeft": 80.0
+    },
+    {
+        "id": 19,
+        "name": "Bananas",
+        "price": 247.5,
+        "quantity": 60.0,
+        "reorderLeft": 50.0
+    },
+    {
+        "id": 20,
+        "name": "Oranges",
+        "price": 139.5,
+        "quantity": 140.0,
+        "reorderLeft": 130.0
+    },
+    {
+        "id": 21,
+        "name": "Potatoes",
+        "price": 198.0,
+        "quantity": 110.0,
+        "reorderLeft": 100.0
+    },
+    {
+        "id": 22,
+        "name": "Onions",
+        "price": 99.0,
+        "quantity": 70.0,
+        "reorderLeft": 60.0
+    },
+    {
+        "id": 23,
+        "name": "Tomatoes",
+        "price": 213.6,
+        "quantity": 130.0,
+        "reorderLeft": 120.0
+    },
+    {
+        "id": 24,
+        "name": "Carrots",
+        "price": 174.5,
+        "quantity": 100.0,
+        "reorderLeft": 90.0
+    },
+    {
+        "id": 25,
+        "name": "Cucumbers",
+        "price": 124.5,
+        "quantity": 150.0,
+        "reorderLeft": 140.0
+    },
+    {
+        "id": 26,
+        "name": "Bell Peppers",
+        "price": 237.6,
+        "quantity": 120.0,
+        "reorderLeft": 110.0
+    },
+    {
+        "id": 27,
+        "name": "Lettuce",
+        "price": 274.5,
+        "quantity": 80.0,
+        "reorderLeft": 70.0
+    },
+    {
+        "id": 28,
+        "name": "Mushrooms",
+        "price": 150.0,
+        "quantity": 200.0,
+        "reorderLeft": 190.0
+    },
+    {
+        "id": 29,
+        "name": "Broccoli",
+        "price": 99.0,
+        "quantity": 90.0,
+        "reorderLeft": 80.0
+    },
+    {
+        "id": 30,
+        "name": "Spinach",
+        "price": 224.1,
+        "quantity": 60.0,
+        "reorderLeft": 50.0
+    },
+    {
+        "id": 31,
+        "name": "Kale",
+        "price": 129.5,
+        "quantity": 140.0,
+        "reorderLeft": 130.0
+    },
+    {
+        "id": 32,
+        "name": "Celery",
+        "price": 198.9,
+        "quantity": 110.0,
+        "reorderLeft": 100.0
+    },
+    {
+        "id": 33,
+        "name": "Cabbage",
+        "price": 84.6,
+        "quantity": 70.0,
+        "reorderLeft": 60.0
+    },
+    {
+        "id": 34,
+        "name": "Zucchini",
+        "price": 192.6,
+        "quantity": 130.0,
+        "reorderLeft": 120.0
+    },
+    {
+        "id": 35,
+        "name": "Eggplants",
+        "price": 150.0,
+        "quantity": 100.0,
+        "reorderLeft": 90.0
+    },
+    {
+        "id": 36,
+        "name": "Cauliflower",
+        "price": 174.5,
+        "quantity": 150.0,
+        "reorderLeft": 140.0
+    },
+    {
+        "id": 37,
+        "name": "Avocado",
+        "price": 99.0,
+        "quantity": 200.0,
+        "reorderLeft": 190.0
+    },
+    {
+        "id": 38,
+        "name": "Garlic",
+        "price": 139.5,
+        "quantity": 80.0,
+        "reorderLeft": 70.0
+    },
+    {
+        "id": 39,
+        "name": "Ginger",
+        "price": 247.5,
+        "quantity": 120.0,
+        "reorderLeft": 110.0
+    },
+    {
+        "id": 40,
+        "name": "Lemons",
+        "price": 198.0,
+        "quantity": 90.0,
+        "reorderLeft": 80.0
+    },
+    {
+        "id": 41,
+        "name": "Limes",
+        "price": 124.5,
+        "quantity": 180.0,
+        "reorderLeft": 170.0
+    },
+    {
+        "id": 42,
+        "name": "Apples",
+        "price": 224.1,
+        "quantity": 60.0,
+        "reorderLeft": 50.0
+    },
+    {
+        "id": 43,
+        "name": "Bananas",
+        "price": 274.5,
+        "quantity": 140.0,
+        "reorderLeft": 130.0
+    },
+    {
+        "id": 44,
+        "name": "Oranges",
+        "price": 79.5,
+        "quantity": 110.0,
+        "reorderLeft": 100.0
+    },
+    {
+        "id": 45,
+        "name": "Milk",
+        "price": 119.4,
+        "quantity": 70.0,
+        "reorderLeft": 60.0
+    },
+    {
+        "id": 46,
+        "name": "Eggs",
+        "price": 268.2,
+        "quantity": 130.0,
+        "reorderLeft": 120.0
+    },
+    {
+        "id": 47,
+        "name": "Bread",
+        "price": 198.0,
+        "quantity": 100.0,
+        "reorderLeft": 90.0
+    },
+    {
+        "id": 48,
+        "name": "Butter",
+        "price": 124.5,
+        "quantity": 150.0,
+        "reorderLeft": 140.0
+    },
+    {
+        "id": 49,
+        "name": "Sugar",
+        "price": 237.6,
+        "quantity": 120.0,
+        "reorderLeft": 110.0
+    },
+    {
+        "id": 50,
+        "name": "Salt",
+        "price": 269.1,
+        "quantity": 80.0,
+        "reorderLeft": 70.0
+    }
+]

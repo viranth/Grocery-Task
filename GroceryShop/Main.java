@@ -1,16 +1,7 @@
 package GroceryShop;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.List;
 import java.util.Scanner;
 
-import javax.json.Json;
 
 public class Main {
     public static void main(String[] args) {
@@ -41,35 +32,73 @@ public class Main {
                         System.out.println("Enter the number of products to add : ");
                         int productsCount = sc.nextInt();
                         for (int i = 0; i < productsCount; i++) {
-                            System.out.print("Enter the name of the product: ");
-                            String name = sc.nextLine();
-                            System.out.print("Enter the price of the product: ");
-                            double price = Double.parseDouble(sc.nextLine());
+                            System.out.println("Enter the name of the product: \n");
+                            String name = sc.next();
+                            System.out.println("Enter the price of the product: ");
+                            double price = sc.nextDouble();
                             System.out.print("Enter the quantity of the product: ");
-                            double quantity = Double.parseDouble(sc.nextLine());
+                            double quantity = sc.nextDouble();
 
                             // Create a new product and add it to the stock
                             StockItem newProduct = new StockItem(name, price, quantity);
                             stockManager.addStockItem(newProduct);
+                            jsonHandler.writeJsonFile(stockManager);
                         }
                     } else if (stockMenu == 2) {
 
-                        System.out.print("Enter the new name for the product: ");
-                        String newName = sc.nextLine();
-                        System.out.print("Enter the new price for the product: ");
-                        double newPrice = Double.parseDouble(sc.nextLine());
-                        System.out.print("Enter the new quantity for the product: ");
-                        double newQuantity = Double.parseDouble(sc.nextLine());
-
-                        double newReorderLeft = newQuantity - 10; // Calculate reorderLeft
-
+                        System.out.print("Enter the poduct id you want to update :");
+                        int idToUpdate = sc.nextInt();
+                        String nameToUpdate = "";
                         for (StockItem item : stockManager.getAllStockItems()) {
-                            if (item.getId() == 2) {
-                                item.setName(newName);
-                                item.setPrice(newPrice);
-                                item.setQuantity(newQuantity);
-                                item.setReorderLeft(newReorderLeft); // Update reorderLeft
+                            if (item.getId() == idToUpdate) {
+                                nameToUpdate = item.getName();
                             }
+                        }
+
+                        System.out.println("Do you want to update " + nameToUpdate + "? Y/N");
+                        char updateChoice = sc.next().charAt(0);
+                        if (updateChoice == 'Y' || updateChoice == 'y') {
+                            System.out.println("Update Product Name press P\n" +
+                                    "Update Price press C\n" +
+                                    "Update Quantity press Q\n");
+                            char updateItemChoice = sc.next().charAt(0);
+                            String newName = "";
+                            double newPrice = 0;
+                            double updateQuantity = 0;
+                            double newReorderLeft = 0;
+
+                            if ((updateItemChoice == 'P') || (updateItemChoice == 'p')) {
+                                System.out.print("Enter the new name for the product: ");
+                                newName = sc.next();
+                                System.out.println();
+                            } else if ((updateItemChoice == 'c') || (updateItemChoice == 'C')) {
+                                System.out.print("Enter the new price for the product: ");
+                                newPrice = sc.nextDouble();
+                                System.out.println();
+                            } else if ((updateItemChoice == 'q') || (updateItemChoice == 'Q')) {
+                                System.out.print("Enter the new quantity for the product: ");
+                                updateQuantity = sc.nextDouble();
+                                System.out.println();
+                            }
+
+                            for (StockItem item : stockManager.getAllStockItems()) {
+                                if (item.getId() == idToUpdate) {
+                                    if ((updateItemChoice == 'P') || (updateItemChoice == 'p')) {
+                                        item.setName(newName);
+                                    } else if ((updateItemChoice) == 'c' || (updateItemChoice == 'C')) {
+                                        item.setPrice(newPrice);
+                                    } else if ((updateItemChoice == 'q') || (updateItemChoice == 'Q')) {
+                                        double newQuantity = item.getQuantity() + updateQuantity;
+                                        // Calculate the new 1
+                                        newReorderLeft = newQuantity - 10;
+                                        item.setQuantity(newQuantity);
+                                        item.setReorderLeft(newReorderLeft);// Update reorderLeft
+                                    }
+
+                                }
+                            }
+
+                            jsonHandler.writeJsonFile(stockManager);
                         }
 
                     } else if (stockMenu == 3) {
@@ -83,11 +112,11 @@ public class Main {
                         System.out.println("you want to delete " + nameToDelete + "? Y/N");
                         char deleteProduct = sc.next().charAt(0);
                         if ((deleteProduct == 'Y') || (deleteProduct == 'y')) {
-                            stockManager.deleteStockItem(idToDelete);                            
+                            stockManager.deleteStockItem(idToDelete);
                             // Write the updated data back to the JSON file
-                            jsonHandler.writeJsonFile(stockManager);;
+                            jsonHandler.writeJsonFile(stockManager);
                             break; // Exit the loop after deletion
-                        }                        
+                        }
 
                     } else if (stockMenu == 4) {
                         // Generate and display the stock report
