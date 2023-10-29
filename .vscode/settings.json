@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/viranth/Downloads/javax.json-1.0.jar",
+        "/home/viranth/Downloads/gson-2.2.2.jar"
+    ]
+}
